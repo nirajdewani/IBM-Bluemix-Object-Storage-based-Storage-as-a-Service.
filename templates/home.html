@@ -1,0 +1,35 @@
+<!doctype html>
+
+<title>
+		Cloud Drive
+</title>
+
+<center>
+<h3>Welcome to Cloud Drive</h3>
+</center>
+<hr>
+<h3>Container size (in MB): {{containerSize}}</h3>
+
+<h3>Upload a file:</h3>
+<form method="POST" action="uploadFile" enctype="multipart/form-data">
+	<input type="file" name="file" value="Choose file">
+	<input type="submit" value="Upload">	
+</form>
+
+<br>
+
+<ul>
+	{% for i in range(0, fileList|count) %}
+		<div style="clear: both">
+		<h3> {{ fileList[i] }} </h3>
+		<h4> Size (in bytes): {{sizeList[i]}}</h4> 
+		<a href="{{ url_for('deleteFile', fileName=fileList[i]) }}">Delete</a> &nbsp;
+		<a href="{{ url_for('downloadFile', fileName=fileList[i]) }}">Download</a>	
+		</div>
+	{% endfor %}
+</ul>
+
+<br>
+
+
+
