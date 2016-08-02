@@ -1,4 +1,4 @@
-# IBM-Bluemix-Object-Storage-based-Storage-as-a-Service.
+# IBM Bluemix Object Storage based Storage as a Service
 This application uses Python and Flask with IBM Bluemix Object Storage as backend.
 
 Features:
